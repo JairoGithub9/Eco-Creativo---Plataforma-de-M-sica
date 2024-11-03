@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/recording.js') }}" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lamejs/1.2.0/lame.min.js"></script>
+    <link rel="icon" href="static\img\img1.png" type="image/x-icon">
+
+    <title>Eco Creativo</title>
+</head>
+<body>
+    <header>
+        <h1>Grabar Audio</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Inicio</a></li>
+            <li><a href="{{ url_for('music') }}">Reproducir Música</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Controles de Grabación</h2>
+        <button id="start">Iniciar Grabación</button>
+        <button id="stop" style="display: none;">Detener Grabación</button>
+        <button id="pause" style="display: none;">Pausar Grabación</button>
+        <button id="resume" style="display: none;">Reanudar Grabación</button>
+        <a id="download" style="display: none;">Descargar Grabación</a>
+        <audio id="audioPlayback" controls style="display: none;"></audio>
+        <p id="status"></p>
+    </div>
+</body>
+</html>
+

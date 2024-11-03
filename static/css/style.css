@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e; /* Fondo oscuro */
+    color: #e0e0e0; /* Texto claro */
+    line-height: 1.6;
+}
+
+header {
+    background: #2a2a2a; /* Gris oscuro */
+    color: #e0e0e0;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 3px solid #007BFF; /* Borde azul para definición */
+}
+
+nav {
+    background: #333; /* Gris para el menú */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Flexbox para mantener alineación */
+    justify-content: center; /* Centrar el menú */
+}
+
+nav ul li {
+    margin-right: 30px; /* Espaciado entre elementos del menú */
+}
+
+nav ul li a {
+    color: #e0e0e0; /* Texto claro */
+    text-decoration: none;
+    padding: 12px 15px; /* Espaciado generoso */
+    transition: background 0.3s, color 0.3s; /* Transiciones para el fondo y color */
+}
+
+nav ul li a:hover {
+    background: #007BFF; /* Azul vibrante al pasar el mouse */
+    color: #fff; /* Texto blanco al pasar el mouse */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+h1, h2, h3 {
+    margin: 20px 0;
+}
+
+h2 {
+    color: #007BFF; /* Azul para subtítulos */
+}
+
+.container {
+    max-width: 800px; /* Ancho máximo */
+    margin: 30px auto; /* Margen superior e inferior */
+    padding: 20px;
+    background: #2a2a2a; /* Fondo gris oscuro para el contenedor */
+    border-radius: 8px;
+}
+
+button {
+    background-color: #007BFF; /* Color azul */
+    color: #e0e0e0; /* Texto claro */
+    border: none; /* Sin borde */
+    padding: 12px 20px; /* Espaciado interno más generoso */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor al pasar el ratón */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background 0.3s, transform 0.2s; /* Efecto de transición */
+    margin: 5px; /* Espaciado entre botones */
+}
+
+button:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el ratón */
+    transform: scale(1.05); /* Efecto de ampliación */
+}
+
+button:active {
+    transform: scale(0.95); /* Efecto de contracción al hacer clic */
+}
+
+input[type="file"] {
+    padding: 10px;
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #444; /* Borde oscuro */
+    margin: 10px 0; /* Margen superior e inferior */
+    background: #2a2a2a; /* Fondo gris oscuro */
+    color: #e0e0e0; /* Texto claro */
+}
+
+input[type="submit"] {
+    background: #007BFF; /* Color azul */
+    color: #e0e0e0; /* Texto claro */
+    border: none;
+    padding: 12px 20px; /* Espaciado interno más generoso */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: #0056b3; /* Color al pasar el mouse sobre el botón */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 15px;
+    background: #2a2a2a; /* Fondo oscuro para los elementos de la lista */
+    margin-bottom: 10px; /* Espaciado entre elementos */
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+ul li:hover {
+    background: #007BFF; /* Color azul al pasar el mouse sobre los elementos de la lista */
+}
+
+.controls {
+    margin-top: 15px; /* Espaciado arriba de los controles */
+}
+
+.controls button {
+    display: inline-block; /* Mostrar como bloque */
+}
+
+#download {
+    display: inline-block; /* Mostrar como bloque en línea */
+    background-color: #28a745; /* Color verde para el botón */
+    color: white; /* Texto en blanco */
+    padding: 12px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background 0.3s, transform 0.2s; /* Transición para efectos */
+    margin-top: 10px; /* Margen superior */
+}
+
+#download:hover {
+    background-color: #218838; /* Color más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de ampliación */
+}
+
+#download:active {
+    transform: scale(0.95); /* Efecto de contracción al hacer clic */
+}
+
+input[type="text"] {
+    width: calc(100% - 22px); /* Ajusta el ancho */
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #00ff00; /* Borde verde neón */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #333; /* Fondo oscuro para la caja de texto */
+    color: #ffffff; /* Texto blanco */
+    font-size: 16px;
+    transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+input[type="text"]::placeholder {
+    color: #aaa; /* Color del placeholder */
+}
+
+input[type="text"]:focus {
+    border-color: #00cc00; /* Borde más claro al enfocar */
+    outline: none; /* Quitar el contorno por defecto */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #00ff00; /* Botón verde neón */
+    color: #000; /* Texto negro */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s; /* Transición suave para el fondo */
+}
+
+button:hover {
+    background-color: #00cc00; /* Efecto hover más oscuro */
+}

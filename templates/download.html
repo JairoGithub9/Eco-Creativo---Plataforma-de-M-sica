@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Creativo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="static\img\img1.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Descargar Música de YouTube</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Inicio</a></li>
+                <li><a href="{{ url_for('about') }}">¿Quiénes Somos?</a></li>
+                <li><a href="{{ url_for('music') }}">Reproducir Música</a></li>
+                <li><a href="{{ url_for('record') }}">Grabar Audio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Ingresa el enlace de la canción:</h2>
+        <form method="post">
+            <input type="text" name="video_url" placeholder="Enlace de YouTube" required>
+            <button type="submit">Descargar</button>
+        </form>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul>
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>

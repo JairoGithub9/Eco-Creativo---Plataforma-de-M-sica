@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Creativo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="static\img\img1.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>¿Quiénes Somos?</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Inicio</a></li>
+                <li><a href="{{ url_for('about') }}">¿Quiénes Somos?</a></li>
+                <li><a href="{{ url_for('music') }}">Reproducir Música</a></li>
+                <li><a href="{{ url_for('record') }}">Grabar Audio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Nuestra Misión</h2>
+        <p>En <strong>Eco Creativo</strong>, nos apasiona la música y la creatividad. Nuestra misión es proporcionar una plataforma intuitiva que permita a todos disfrutar de sus melodías favoritas y explorar su talento musical.</p>
+        
+        <div class="mission-details">
+            <h3>¿Qué buscamos?</h3>
+            <ul>
+                <li><strong>Accesibilidad:</strong> Hacer que la música y la grabación sean accesibles para todos, sin importar la experiencia.</li>
+                <li><strong>Innovación:</strong> Ofrecer herramientas modernas para crear y compartir música de forma sencilla.</li>
+                <li><strong>Comunidad:</strong> Fomentar un espacio donde los amantes de la música puedan conectarse e inspirarse mutuamente.</li>
+            </ul>
+        </div>
+    
+        <p>Te invitamos a unirte a nosotros en este emocionante viaje musical. ¡Descubre, crea y comparte tu pasión por la música!</p>
+    </div>
+    
+</body>
+</html>
+

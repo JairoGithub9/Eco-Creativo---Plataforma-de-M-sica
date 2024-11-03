@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Creativo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/music_controls.js') }}" defer></script>
+    <link rel="icon" href="static\img\img1.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Reproducción de Música</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Inicio</a></li>
+                <li><a href="{{ url_for('about') }}">¿Quiénes Somos?</a></li>
+                <li><a href="{{ url_for('music') }}">Reproducir Música</a></li>
+                <li><a href="{{ url_for('record') }}">Grabar Audio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Lista de Canciones</h2>
+        <ul>
+            {% for song in songs %}
+                <li>
+                    <span>{{ song }}</span>
+                    <div class="controls">
+                        <button class="button" data-action="play" data-song="{{ song }}">Play</button>
+                        <button class="button" data-action="stop" data-song="{{ song }}">Stop</button>
+                        <button class="button" data-action="pause" data-song="{{ song }}">Pause</button>
+                        <button class="button" data-action="resume" data-song="{{ song }}" style="display:none;">Resume</button>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+        <h3>Cargar Música</h3>
+        <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".mp3, .wav" required>
+            <input type="submit" value="Subir Música">
+        </form>
+    </div>
+</body>
+</html>
+
+

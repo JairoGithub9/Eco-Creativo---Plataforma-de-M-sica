@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Creativo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="static/img/img1.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a la Aplicación de Música</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Inicio</a></li>
+                <li><a href="{{ url_for('about') }}">¿Quiénes Somos?</a></li>
+                <li><a href="{{ url_for('music') }}">Reproducir Música</a></li>
+                <li><a href="{{ url_for('record') }}">Grabar Audio</a></li>
+                <li><a href="{{ url_for('download') }}">Descargar de YouTube</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>¡Bienvenido a Eco Creativo!</h2>
+        <p>Tu destino para explorar, reproducir y crear música de manera única.</p>
+        <div class="features">
+            <h3>Características Destacadas:</h3>
+            <ul>
+                <li><strong>Reproducción de Música:</strong> Accede a tu música favorita y disfrútala al instante.</li>
+                <li><strong>Grabación de Audio:</strong> Graba tus propias melodías y sonidos con un solo clic.</li>
+                <li><strong>Descarga de Canciones:</strong> Obtén las mejores canciones de YouTube en formato MP3.</li>
+            </ul>
+        </div>
+        <p>¡Comienza tu viaje musical ahora! Usa el menú de navegación para explorar todas las funciones que tenemos para ti.</p>
+        <p class="call-to-action">¿Listo para crear? <a href="{{ url_for('record') }}">Haz clic aquí para grabar tu audio</a> y desata tu creatividad.</p>
+    </div>
+    
+</body>
+</html>
+

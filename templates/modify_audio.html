@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Eco Creativo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="static\img\img1.png" type="image/x-icon">
+    <link rel="icon" href="static\img\img1.png" type="image/x-icon">
+</head>
+<body>
+    <h1>Modificar Audio</h1>
+    <form action="{{ url_for('modify_audio') }}" method="post">
+        <label for="volume">Ajustar Volumen (dB):</label>
+        <input type="range" id="volume" name="volume" min="-20" max="20" value="0">
+        <label for="speed">Ajustar Velocidad:</label>
+        <input type="range" id="speed" name="speed" min="0.5" max="2" step="0.1" value="1">
+        <button type="submit">Modificar y Descargar</button>
+    </form>
+</body>
+</html>
+
+
